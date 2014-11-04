@@ -68,9 +68,6 @@ def main():
     d_tree = tree.DecisionTreeClassifier(random_state=random_state)
     svr = svm.SVC(random_state=random_state)
 
-    print 'gross comparison between various classifiers using 5-fold cross validation'
-    print "################################################################################"
-
     pred_results = []
     for predictor in [gnb, lgr, lda, svc, d_tree, svr]:
         my_results = predictor.fit(X_train, y_train).predict(X_test)
