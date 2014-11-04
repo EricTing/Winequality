@@ -57,10 +57,14 @@ def main():
 
     X, y = splitXandY(dset)
     X = scale(X)
-    X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.33)
-
 
     random_state = 0
+    X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, 
+                                                                         y, 
+                                                                         random_state=random_state,
+                                                                         test_size=0.33)
+
+
     gnb = GaussianNB()
     lda = LDA()
     lgr = LogisticRegression(penalty='l1',random_state=random_state)
