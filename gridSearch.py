@@ -40,7 +40,7 @@ def gridSearch4Svc(X, y, test_size=0.33, random_state=0, ofn=''):
     for _ in range(12):
         y_pred = svm.SVC(C=init_C, random_state=random_state).fit(X_train, y_train).predict(X_test)
         accu = accuracy(y_test, y_pred)
-        f.write("%f %0.2f" % (init_C, accu))
+        f.write("%f %0.2f\n" % (init_C, accu))
         init_C *= 10
 
 def main():
