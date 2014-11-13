@@ -64,6 +64,7 @@ def main():
                                                                          random_state=random_state,
                                                                          test_size=0.33)
 
+    mytree = MyTree()
 
     gnb = GaussianNB()
     lda = LDA()
