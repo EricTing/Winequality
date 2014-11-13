@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+"""grid search on SVC and decision tree 
+
+search result print to file for plotting
+"""
 
 from sklearn import cross_validation
 from sklearn import svm
@@ -40,8 +44,8 @@ def gridSearch4Svc(X, y, test_size=0.33, random_state=0, ofn=''):
         init_C *= 10
 
 def main():
-    # red_path = 'winequality-red.csv'
     path = 'winequality-red.csv'
+    # path = 'winequality-red.csv'
     dset = loadDset(path)
 
     X, y = splitXandY(dset)
