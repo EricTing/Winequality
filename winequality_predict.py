@@ -64,8 +64,6 @@ def main():
                                                                          random_state=random_state,
                                                                          test_size=0.33)
 
-    mytree = MyTree()
-
     gnb = GaussianNB()
     lda = LDA()
     lgr = LogisticRegression(penalty='l1',random_state=random_state)
@@ -80,8 +78,18 @@ def main():
         print "--------------------------------------------------------------------------------"
         print predictor
         print "Accuracy: %0.2f" % accuracy(my_results, y_test)
+
+    print "--------------------------------------------------------------------------------"
+    guesses = []
+    for quality_val in y:
+        my_guess = np.random.choice(y)
+        guesses.append(my_guess)
+    rnd_accu = accuracy(y, guesses)
+    print "Random guess"
+    print "Accuracy: %0.2f" % (rnd_accu)
         
-    # to calculate the boost results
+
+    # to calculate the results from voting
     votes_for_each = zip(*pred_results)  # unpack is needed
 
     def most_common(votes):     # to find consensus for each wine
@@ -91,7 +99,7 @@ def main():
     
     print "--------------------------------------------------------------------------------"
     accu = accuracy(y_test, consensus)
-    print "Boost accuracy"
+    print "Voting"
     print "Accuracy: %0.2f" % (accu)
 
 
