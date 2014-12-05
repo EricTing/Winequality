@@ -14,6 +14,7 @@ from sklearn.lda import LDA
 from sklearn import tree
 from sklearn import svm
 
+
 def loadDset(path):
     """load the original dataset
     Keyword Arguments:
@@ -51,7 +52,7 @@ def accuracy(y_true,y_pred):
 
 def main():
     # red_path = 'winequality-red.csv'
-    path = 'winequality-red.csv'
+    path = 'winequality-white.csv'
     dset = loadDset(path)
     dset = dset.reindex(np.random.permutation(dset.index))
 
