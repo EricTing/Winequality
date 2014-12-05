@@ -10,7 +10,7 @@
 ** Hyperparamter optimization
    gridSearch.py
 
-** Ensemble method using a voing scheme
+** Ensemble method using a voting scheme
    winequality.py
 
 ** Discriminant Analysis
