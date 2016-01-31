@@ -1,8 +1,12 @@
-- [Classification based data mining for wine quality predication](#sec-1)
+- [Wine quality predication](#sec-1)
 
-# Classification based data mining for wine quality predication<a id="orgheadline1"></a>
+# Wine quality predication<a id="orgheadline1"></a>
 
 CSC7442 group project report, LSU
+
+Data source:
+
+<https://archive.ics.uci.edu/ml/datasets/Wine+Quality>
 
 This repository includes:
 
