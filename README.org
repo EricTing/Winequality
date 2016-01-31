@@ -1,17 +1,20 @@
 * Classification based data mining for wine quality predication
+CSC7442 group project report, LSU
 
-  CSC7442 group project report, LSU
+This repository includes:
 
-* Include
+1. A in-house decision tree implementation
 
-** In-house decision tree implementation
-   id3
+   ./id3
 
-** Hyperparamter optimization
-   gridSearch.py
+2. script for Hyperparamter optimization using GridSearch
 
-** Ensemble method using a voting scheme
-   winequality.py
+   ./gridSearch.py
 
-** Discriminant Analysis
-   discriminant.docx
+3. Implementation of ensemble method using a voting scheme
+
+   ./winequality.py
+
+4. Statistical discriminant analysis
+
+   ./discriminant.docx
